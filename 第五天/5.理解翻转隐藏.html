@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>沧州职业技术学院</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .outer {
+            width: 100px;
+            height: 200px;
+            perspective: 2000px;
+        }
+
+        .inner {
+            width: 100px;
+            height: 200px;
+            background: url("案例：翻牌/puke-k.png") no-repeat;
+            background-size: 100% 100%;
+
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner"></div>
+</div>
+</body>
+</html>

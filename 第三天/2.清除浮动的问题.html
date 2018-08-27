@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .newsBox {
+            background: #E45454;
+            /*height: 35px;*/
+            /*overflow: hidden;*/
+        }
+
+        .newsBox:after {
+            /*:after(:before) 在当前容器的末尾（最开始）动态创建一个虚拟元素*/
+            display: block;
+            height: 0;
+            content: '';
+            clear: both; /*clear:both本身是清除浮动的方案，但是需要把它设置给当前容器末尾非浮动的一个元素，我们使用after仅仅是为了动态创建一个这样的元素而已*/
+        }
+
+        .newsBox li {
+            float: left;
+            margin-right: 10px;
+            width: 150px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+<!--ul.newsBox>li{页卡$}*5-->
+<ul class="newsBox">
+    <li>页卡1</li>
+    <li>页卡2</li>
+    <li>页卡3</li>
+    <li>页卡4</li>
+    <li>页卡5</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+//1.less中使用@创建变量存储值（后期需要这个样式值，直接使用变量即可，这样只要把变量值一改，所有用到的地方都修改了）
+@bg-col: #F4F4F4;
+@bg-white: #FFF;
+@col-orange: orange;
+
+.box_center(@v:0) {
+  //2.创建函数，封装公共的样式，@v是形参，默认值是零
+  margin: @v auto;
+}
+
+html, body {
+  background-color: @bg-col;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.articleBox {
+  box-sizing: border-box;
+  .box_center; //=>执行函数(不传递实参值，小括号可以省略)
+  padding: 0 20px;
+  width: 800px;
+  background-color: @bg-white;
+
+  //3.less中提供层级嵌套，这样写相当于设置ARTICLE后代中HEADER的样式
+  .headerBox {
+    border-bottom: 1px dashed darken(@bg-col, 30%); //=>darken是在原有某一个颜色的基础上加深颜色(lighten变浅)
+
+    .bigTitle, h2 {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 16px;
+      color: @col-orange;
+      font-weight: normal;
+    }
+  }
+
+  .mainBox {
+    h3 {
+      height: 35px;
+      line-height: 35px;
+      font-size: 14px;
+      color: green;
+    }
+
+    //....
+  }
+}
+

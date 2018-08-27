@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--响应式页面这个必须要加：防止页面缩放，内容缩小 meta:vp [TAB]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沧州职业技术学院</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+
+    <!--PX编写样式-->
+    <style>
+        /*
+         * 特点：
+         *  1.不管设备大小，元素大小是不变的
+         *  2.如果需要修改元素大小，只能给元素一个个单独修改样式（操作起来比较麻烦）
+         */
+        /*div {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        div.two {
+            width: 200px;
+            height: 200px;
+        }*/
+    </style>
+
+    <!--REM-->
+    <style>
+        /*
+         * 特点：
+         *   1.REM是相对单位，相对于HTML字体大小的单位，我们把元素的样式都用REM设置，这样以后只要我们把HTML的字体大小一改，所有元素的样式都会跟着修改
+         *   2.为了方便计算，我们一般比例设置为10或者10的倍数（例如：100），但是不用10，因为浏览器最小字体是12PX，这样导致渲染差距，我们用100；
+         */
+        html {
+            /*设定REM和PX转换的比例*/
+            font-size: 20px; /*1REM=20PX*/
+        }
+
+        /*把所有的PX按照比例全部设置为REM（默认情况下这种写法和设置PX没啥区别，盒子还是这么大）*/
+        div {
+            margin: 2.5rem;
+            width: 5rem;
+            height: 5rem;
+            background: red;
+        }
+
+        div.two {
+            width: 10rem;
+            height: 10rem;
+        }
+    </style>
+
+    <!--动态计算REM的比例-->
+    <script>
+        ~function () {
+            function computed() {
+                /*
+                 * HTML:HTML标签
+                 * WINW:当前设备的宽度
+                 * DESW:当前设计稿的宽度
+                 */
+                let HTML = document.documentElement,
+                    winW = HTML.clientWidth,
+                    desW = 750;
+                if (winW > desW) {
+                    //=>设备宽度超过设计稿，页面内容不去放大，维持原有的750下的效果即可（也就是HTML字体大小还是100PX）
+                    HTML.style.fontSize = '100px';
+                    return;//=>条件成立：函数后面的操作不执行
+                }
+                HTML.style.fontSize = winW / desW * 100 + 'px';
+            }
+
+            computed();
+            window.addEventListener('resize', computed);
+        }();
+    </script>
+</head>
+<body>
+<div></div>
+<div class="two"></div>
+</body>
+</html>

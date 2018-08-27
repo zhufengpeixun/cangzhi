@@ -1,0 +1,83 @@
+html, body {
+    background-color: #F4F4F4;
+}
+
+.articleBox {
+    box-sizing: border-box;
+    margin: 0 auto; /*左右MARGIN=AUTO：距离左右两边的距离一样，也就是水平居中*/
+    padding: 0 20px;
+    width: 800px;
+    background-color: #FFF;
+}
+
+.articleBox .headerBox {
+    border-bottom: 1px dashed #AAA;
+}
+
+.articleBox .headerBox .bigTitle {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.articleBox .headerBox h2 {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: orange;
+    font-weight: normal;
+}
+
+.articleBox .mainBox {
+
+}
+
+.articleBox .mainBox h3 {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: green;
+}
+
+.articleBox .mainBox p {
+    line-height: 30px;
+    font-size: 12px;
+    text-indent: 2em; /*首行缩进：2EM是两个文字，当然我们也可以用像素*/
+}
+
+.articleBox .mainBox p strong {
+    color: orange;
+}
+
+.articleBox .mainBox .figureBox {
+    float: left;
+    box-sizing: border-box;
+    margin: 10px 10px 0 0;
+    width: 300px;
+}
+
+.articleBox .mainBox .figureBox .imgBox {
+    display: block; /*让IMG变为块状标签*/
+    width: 100%;
+}
+
+.articleBox .mainBox .figureBox .figcaptionBox {
+    font-size: 11px;
+    color: #999;
+    font-style: italic;
+    line-height: 25px;
+}
+
+.articleBox .mainBox .asideBox {
+    box-sizing: border-box;
+    float: right;
+    margin: 10px 0 0 10px;
+    width: 200px;
+}
+
+.articleBox .mainBox .asideBox .imgBox {
+    display: block;
+    width: 100%;
+}

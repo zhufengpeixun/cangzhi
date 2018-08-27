@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <title>珠峰培训-REACT</title>
+</head>
+<body>
+<script type="text/javascript">
+    ~function anonymous() {
+        let event = 'resize';
+        'onorientationchange' in window ? event = 'orientationchange' : null;
+
+        function computed() {
+            let HTML = document.documentElement,
+                winW = HTML.clientWidth,
+                desW = 750,
+                font = 100;
+            font = winW >= desW ? 100 : winW / desW * 100;
+            HTML.style.fontSize = font + 'px';
+        }
+
+        computed();
+        window.addEventListener(event, computed, false);
+    }();
+</script>
+
+<div id="root" class="mainBox"></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form action="addUser.php">
+    <input type="text">
+    <input type="submit">
+</form>-->
+
+<!--
+  NAME是用来分组的，一组中只能选中一个
+  LABEL中的FOR指向某个表单的ID，相当于给当前表单做标记，点击文字，表单也可以有选中可取消选中的效果
+-->
+<!--<input id="man" type="radio" name="sex" checked><label for="man">男</label>
+<br/>
+<input id="woman" type="radio" name="sex"><label for="woman">女</label>-->
+
+<!--邮箱验证-->
+<!--<input type="text" id="userEmail">
+<script>
+    let userEmail = document.getElementById('userEmail');
+    userEmail.onkeyup = function () {
+        let val = this.value;
+        let reg = /^\w+@([0-9A-Za-z]+)(\.(com|cn))$/;
+        if (!reg.test(val)) {
+            this.style.borderColor = 'red';
+        }else {
+            this.style.borderColor = 'green';
+        }
+    };
+</script>-->
+
+<!--
+<style>
+    #userEmail:valid {
+        border-color: green;
+    }
+
+    #userEmail:invalid {
+        border-color: red;
+    }
+</style>
+<input type="email" id="userEmail">
+-->
+
+<input type="date">
+<input type="color">
+<input type="range">
+
+</body>
+</html>

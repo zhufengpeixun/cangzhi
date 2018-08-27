@@ -1,0 +1,41 @@
+#articleBox {
+    /*HTML标签的ID是唯一的，我们基于唯一的ID可以获取到对应的标签（标签是唯一的）：精确查找*/
+    color: red;
+}
+
+p {
+    /*选中页面中所有标签名为P的，并且设置样式：分类查找*/
+    font-size: 14px;
+}
+
+.col-blue {
+    /*自定义标示设置对应的样式，后期谁需要有这个样式，就给谁设置这个自定义标识即可（class='col-blue'）：自定义类别筛选*/
+    color: blue;
+}
+
+* {
+    /*星号就是通配符：代表所有的标签*/
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+
+p, .col-blue {
+    /*逗号分隔一组中的每部分，每部分都具备这个样式：公共样式提取*/
+    line-height: 30px;
+}
+
+#articleBox > header {
+    /*ID为articleBox盒子，儿子元素中标签名为header的具备这个样式*/
+}
+
+#articleBox header {
+    /*ID为articleBox盒子， 所有后代元素中标签名为header的具备这个样式*/
+}
+
+p.aa {
+    /*标签名为P并且同时具备AA样式类的元素*/
+}
+
+h2:hover {
+    /*鼠标滑过H2具备的样式，同理的active是处理按下态的*/
+    color: pink;
+}

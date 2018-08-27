@@ -1,0 +1,19 @@
+@col: lightblue;
+.link {
+  @w: 100;
+  @h: @w/2-20; //=> @h:@w-50;这样不行，中杆可能是减号也可能是变量的连接符 =>@h:(@w)-50;
+  display: block;
+  width: unit(@w, px); //=>unit是给当前值设置或者移除单位（有单位就是移除，没有单位就是增加）
+  height: unit(@h, px);
+  line-height: unit(@h, px);
+  text-align: center;
+  background: @col;
+
+  //=>&是连接符，目的是在样式的末尾紧跟着某某某
+  &:hover { /*.link:hover*/
+    background: darken(@col, 20%);
+  }
+  &:active {
+    background: darken(@col, 40%);
+  }
+}

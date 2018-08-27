@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+         * img标签比较特殊，不是标准的块状也不是标准的行内，而是类似于行内块状标签
+         *   可以直接设置宽高
+         *   也可以默认并排展示
+         *   不手动设置width，宽度是真实图片的宽度，所以一般项目中我们都会手动设置width:100%;
+         *
+         * input表单元素标签也是具备类似的特点
+         */
+        img {
+            width: 100px;
+            /*height: auto;!*默认值：会根据宽度，按照图片的宽高比例自动缩放，计算出合理的高度，保证图片不变形*!*/
+        }
+    </style>
+</head>
+<body>
+
+<img src="images/pic.png" alt="">
+<img src="images/pic.png" alt="">
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>沧州职业技术学院</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        /*.box {
+            !*margin: 100px 0 0 100px;*!
+            !*position: absolute;
+            top: 100px;
+            left: 100px;*!
+            width: 200px;
+            height: 200px;
+            background: red;
+            !*transform-origin: left top;*!
+            transform: translate(100px, 100px);
+
+            transition-delay: ;
+        }*/
+
+        /*.box {
+            width: 200px;
+            height: 200px;
+            background: red;
+            transition: 1s;
+        }
+
+        .box:hover {
+            background: green;
+            transform: translate(50px, 50px);
+        }*/
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: red;
+            animation: boxMove 2s linear infinite both;
+        }
+
+        @keyframes boxMove {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(500px, 0);
+            }
+            50% {
+                transform: translate(500px, 200px);
+            }
+            75% {
+                transform: translate(0, 200px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="box"></div>
+
+
+</body>
+</html>

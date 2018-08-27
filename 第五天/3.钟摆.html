@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>沧州职业技术学院</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .clock {
+            display: block;
+            margin: 20px auto;
+            width: 120px;
+            height: 300px;
+
+            transform-origin: center top; /*调节中心旋转的参考点：只有这样才是钟摆的效果*/
+            transform: rotate(45deg);
+            animation: clockMove 1s linear infinite both;
+        }
+        
+        @keyframes clockMove {
+            0%, 100% {
+                transform: rotate(45deg);
+            }
+            50% {
+                transform: rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="images/zhongbai.png" alt="" class="clock">
+
+</body>
+</html>

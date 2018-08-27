@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珠峰培训</title>
+    <!--IMPORT CSS-->
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet/less" href="css/index.less">
+    <script src="js/less-2.5.3.min.js"></script>
+
+    <!--PRE-FIX-FREE:设置前缀的插件-->
+    <script src="js/prefixfree.min.js"></script>
+
+    <!--REM-->
+    <script>
+        ~function () {
+            function computed() {
+                let HTML = document.documentElement,
+                    winW = HTML.clientWidth,
+                    desW = 640;
+                if (winW > desW) {
+                    HTML.style.fontSize = '100px';
+                    return;
+                }
+                HTML.style.fontSize = winW / desW * 100 + 'px';
+            }
+
+            computed();
+            window.addEventListener('resize', computed);
+        }();
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <!--魔方区域-->
+    <!--section.cubeBox>(ul.cube>li*6>img[src='images/zf_cube$.png'])+img[src='images/zf_cubeTip.png'].tip [TAB]-->
+    <section class="cubeBox">
+        <ul class="cube">
+            <li><img src="images/zf_cube1.png" alt=""></li>
+            <li><img src="images/zf_cube2.png" alt=""></li>
+            <li><img src="images/zf_cube3.png" alt=""></li>
+            <li><img src="images/zf_cube4.png" alt=""></li>
+            <li><img src="images/zf_cube5.png" alt=""></li>
+            <li><img src="images/zf_cube6.png" alt=""></li>
+        </ul>
+        <img src="images/zf_cubeTip.png" alt="" class="tip">
+    </section>
+
+    <!--详情区域-->
+    <section class="detailBox">
+        <!--SWIPER实现滑屏处理-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--第一页内容-->
+                <div class="swiper-slide page1">
+                    <!--dl>dt+(dd*11>i{0$}+a) [TAB]-->
+                    <dl>
+                        <dt>2018新版课程大纲</dt>
+                        <dd><i>01</i><a href="">HTML5+CSS3基础和实战</a></dd>
+                        <dd><i>02</i><a href="">JavaScript基础入门</a></dd>
+                        <dd><i>03</i><a href="">JS核心思想（ES6/ES7）</a></dd>
+                        <dd><i>04</i><a href="">JS中的设计模式和高阶编程技巧</a></dd>
+                        <dd><i>05</i><a href="">移动端WebApp开发</a></dd>
+                        <dd><i>06</i><a href="">Ajax同源策略请求和跨域处理</a></dd>
+                        <dd><i>07</i><a href="">Node初级开发：基于express搭建web服务器</a></dd>
+                        <dd><i>08</i><a href="">Vue全家桶及项目实战</a></dd>
+                        <dd><i>09</i><a href="">React全家桶、源码分析、项目实战</a></dd>
+                        <dd><i>10</i><a href="">Webpack自动化部署和Git团队协作开发</a></dd>
+                        <dd><i>11</i><a href="">修身立本，金刚经...</a></dd>
+                    </dl>
+                </div>
+
+                <!--第二页的内容-->
+                <div class="swiper-slide page2">
+                    <h2 class="title">课程体系</h2>
+                    <img src="images/zf_course.png" alt="">
+                    <img src="images/zf_course1.png" alt="">
+                    <img src="images/zf_course2.png" alt="">
+                    <img src="images/zf_course3.png" alt="">
+                    <img src="images/zf_course4.png" alt="">
+                    <img src="images/zf_course5.png" alt="">
+                    <img src="images/zf_course6.png" alt="">
+                </div>
+                
+                <div class="swiper-slide">3</div>
+                <div class="swiper-slide">4</div>
+                <div class="swiper-slide">5</div>
+                <div class="swiper-slide">6</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--IMPORT JS-->
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script src="js/makisu.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
